@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenoClock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../app.js" defer></script> 
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="nav-bar-user-modal" id="userModal">
+            <button id="nav-bar-user-modal-btn" class="nav-bar-user-modal-btn">log out</button>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="nav-bar-logo">
+                <h2>Vitality Age</h2>
+            </div>
+            <div class="nav-bar-linkage">
+                <a href="../index.html">My Health Profile</a>
+                <a href="VitalityAgeFolder/index.html" id="active">Vitality Age</a>
+                <a href="#">Mind Age</a>
+                <a href="">Dashboard</a>
+                <a href="">Employees</a>
+                <a href="">Email Templates</a>
+            </div>
+
+            <div class="nav-bar-user">
+                <div class="nav-bar-user-description">
+                    <h3>Demo User</h3>
+                    <p>Dipanwita Organization</p>
+                </div>
+
+                <img id="userImg" src="../includes/img/user2.png" alt="user">
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="main-title-nav">
+            <h2 class="main-title">Vitality Age Section</h2>
+            <div class="main-menu-trace">
+                <img src="../includes/img/home.png" alt="">
+                <p>»</p>
+                <p>Vitality Age</p>
+            </div>
+        </div>
+
+        <div class="main-container-div">
+            <div class="upload-new-report-div">
+                <div class="some-information">
+                    <div class="age">
+                        <p class="upload-tittle">Age:</p>
+                        <p>24</p>
+                    </div>
+                    <div class="gender">
+                        <p class="upload-tittle">Gender:</p>
+                        <p>male</p>
+                    </div>
+                    <div class="last-report">
+                        <p class="upload-tittle">Last report submitted on:</p>
+                        <p>August, 27, 2024</p>
+                    </div>
+                </div>  
+                <button class="upload-new-report-btn">
+                    Upload a new Vitality Age test report
+                </button>
+            </div>
+        </div>
+
+        <div class="coagulazione-container-report">
+            
+            <div class="coagulazione-report-graph-container">
+                <p class="section-tittle">Stato della coagulazione</p>
+
+                <div class="coagulazion-ctn container">
+                    
+                    <div class="coagulazione indicator-container">
+
+                        <div class="value-indicator plt-value">
+                            <p class="freccia">230</p>
+                        </div>
+
+                        <p class="subtitle-container">PLT</p>
+                        <p class="indicatori" id="red">150</p>
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value plt" id="negative"></p>
+                        </div>
+                        <p class="indicatori" id="green">450</p>
+                    </div>
+
+                    <div class="coagulazione indicator-container">
+
+                        <div class="value-indicator mpv-value">
+                            <p class="freccia">9.4</p>
+                        </div>
+
+                        <p class="subtitle-container">MPV</p>
+                        <p class="indicatori" id="red">9.1</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value mpv" id="negative"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">12.3</p>
+
+                    </div>
+
+                    <div class="coagulazione indicator-container">
+
+                        <div class="value-indicator p-lcr-value">
+                            <p class="freccia">27.5</p>
+                        </div>
+
+                        <p class="subtitle-container">P-LCR</p>
+                        <p class="indicatori" id="red">16.4</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value p-lcr" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">44.2</p>
+
+                    </div>
+    
+                    <div class="coagulazione indicator-container">
+
+                        <div class="value-indicator pct-value">
+                            <p class="freccia">0.231</p>
+                        </div>
+
+                        <p class="subtitle-container">PCT</p>
+                        <p class="indicatori" id="red">0.158</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value pct" id="negative"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">0.425</p>
+    
+                    </div>
+                    
+                    <div class="coagulazione indicator-container">
+
+                        <div class="value-indicator pdw-value">
+                            <p class="freccia">14</p>
+                        </div>
+
+                        <p class="subtitle-container">PDW</p>
+                        <p class="indicatori" id="red">10</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value pdw" id="positive"></p>
+                        </div>
+                        
+                        <p class="indicatori" id="green">16</p>
+    
+                    </div>
+                </div>
+            </div>
+
+            <div class="aspetto-lipido-report-graph-container">
+                <p class="section-tittle">Aspetto Lipidico</p>
+
+                <div class="aspetto-lipidico-ctn container">
+                    
+                    <div class="lipido indicator-container">
+                        <div class="value-indicator colesterolo-value">
+                            <p class="freccia">120</p>
+                        </div>
+                        <p class="subtitle-container">Colesterolo totale</p>
+
+                        <p class="indicatori" id="red">0</p>
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value colesterolo-tot" id="positive"></p>
+                        </div>
+                       
+                        <p class="indicatori" id="green">200</p>
+                    </div>
+ 
+                    <div class="lipido indicator-container">
+
+                        <div class="value-indicator colesterolo-ldl-value">
+                            <p class="freccia">89</p>
+                        </div>
+
+                        <p class="subtitle-container">Colesterolo LDL</p>
+                        <p class="indicatori" id="red">0</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value colesterolo-ldl" id="positive"></p>
+                        </div>
+                        <p class="indicatori" id="green">100</p>
+
+                    </div>
+
+                    <div class="lipido indicator-container">
+
+                        <div class="value-indicator colesterolo-hdl-value">
+                            <p class="freccia">54</p>
+                        </div>
+
+                        <p class="subtitle-container">Colesterolo HDL</p>
+                        <p class="indicatori" id="red">45</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value colesterolo-hdl" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">65</p>
+
+                    </div>
+   
+                    <div class="lipido indicator-container">
+
+                        <div class="value-indicator trigliceridi-value" id="negative">
+                            <p class="freccia">184</p>
+                        </div>
+
+                        <p class="subtitle-container">Trigliceridi</p>
+                        <p class="indicatori" id="red">200</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value trigliceridi"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">150</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="minerali-container-report">
+
+            <div class="assetto-marziale-report-graph-container">
+                <p class="section-tittle">Assetto marziale</p>
+
+                <div class="assetto-marziale-ctn container">
+                    
+                    <div class="assetto-marziale indicator-container">
+                        <div class="value-indicator sidremia-value">
+                            <p class="freccia">54</p>
+                        </div>
+
+                        <p class="subtitle-container">Sidremia(Fe)</p>
+                        <p class="indicatori" id="red">33</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value sidremia" id="negative"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">193</p>
+                    </div>
+                    
+                    <div class="assetto-marziale indicator-container">
+
+                        <div class="value-indicator ferritina-value">
+                            <p class="freccia">320</p>
+                        </div>
+
+                        <p class="subtitle-container">Ferritina</p>
+                        <p class="indicatori" id="red">30</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value ferritina" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">400</p>
+
+                    </div>
+
+                    <div class="assetto-marziale indicator-container">
+
+                        <div class="value-indicator transferrina-value">
+                            <p class="freccia">280</p>
+                        </div>
+
+                        <p class="subtitle-container">Transferrina</p>
+                        <p class="indicatori" id="red">200</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value transferrina" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">360</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="minerali-report-graph-container">
+                <p class="section-tittle">Minerali</p>
+
+                <div class="minerali-report-ctn container">
+                    <div class="minerali indicator-container">
+                        <div class="value-indicator sodio-value">
+                            <p class="freccia">124</p>
+                        </div>
+
+                        <p class="subtitle-container">Sodio(Na)</p>
+                        <p class="indicatori" id="red">136</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value sodio" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">145</p>
+                    </div>
+
+                    <div class="minerali indicator-container">
+
+                        <div class="value-indicator potassio-value">
+                            <p class="freccia">4.1</p>
+                        </div> 
+
+                        <p class="subtitle-container">Potassio(k)</p>
+                        <p class="indicatori" id="red">3.5</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value potassio" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">5.1</p>
+
+                    </div>
+
+                    <div class="minerali indicator-container">
+
+                        <div class="value-indicator magnesio-value">
+                            <p class="freccia">2</p>
+                        </div>
+
+                        <p class="subtitle-container">Magnesio(Mg)</p>
+                        <p class="indicatori" id="red">1.6</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value magnesio" id="negative"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">2.6</p>
+
+                    </div>
+
+                    <div class="minerali indicator-container">
+
+                        <div class="value-indicator cloruri-value">
+                            <p class="freccia">106</p>
+                        </div>
+
+                        <p class="subtitle-container">Cloruri(Cl)</p>
+                        <p class="indicatori" id="red">98</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value cloruri" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">107</p>
+    
+                    </div>
+
+                    <div class="minerali indicator-container">
+
+                        <div class="value-indicator calcio-value">
+                            <p class="freccia">9.2</p>
+                        </div>
+
+                        <p class="subtitle-container">Calcio(Ca)</p>
+                        <p class="indicatori" id="red">8.6</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value calcio" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">10.0</p>
+                    </div>
+             
+                    <div class="minerali indicator-container">
+
+                        <div class="value-indicator fosforo-value">
+                            <p class="freccia">3</p>
+                        </div>
+
+                        <p class="subtitle-container">Fosforo(P)</p>
+                        <p class="indicatori" id="red">2.5</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value fosforo" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">4.5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proteine-container-report">
+
+            <div class="proteine-report-graph-container">
+                <p class="section-tittle">Proteine</p>
+
+                <div class="proteine-ctn container">
+                    
+                    <div class="protenine indicator-container">
+                        <div class="value-indicator albuminemia-value">
+                            <p class="freccia">4</p>
+                        </div>
+
+                        <p class="subtitle-container">Albuminemia</p>
+                        <p class="indicatori" id="red">3.50</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value albuminemia" id="negative"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">5.20</p>
+                    </div>
+                    
+                    <div class="proteine indicator-container">
+
+                        <div class="value-indicator proteine-tot-value">
+                            <p class="freccia">62.3</p>
+                        </div>
+
+                        <p class="subtitle-container">Proteine totali</p>
+                        <p class="indicatori" id="red">52.7</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value proteine-tot" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">67.4</p>
+
+                    </div>
+
+                    <p class="elettroforesi-subtitle">Elettroforesi sieroproteica</p>
+                    <div class="elettroforesi-container">
+
+                        <div class="elettroforesi-sub-container-one">
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator alfa-uno-value">
+                                    <p class="freccia">4.2</p>
+                                </div>
+
+                                <p class="subtitle-container">Alfa 1</p>
+                                <p class="indicatori" id="red">3.6</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value alfa-uno" id="negative"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">8</p>
+
+                            </div>
+
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator alfa-due-value">
+                                    <p class="freccia">54</p>
+                                </div>
+
+                                <p class="subtitle-container">Alfa 2</p>
+                                <p class="indicatori" id="red">52.7</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value alfa-due" id="negative"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">67.4</p>
+
+                            </div>
+
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator beta-uno-value">
+                                    <p class="freccia">4</p>
+                                </div>
+
+                                <p class="subtitle-container">Beta 1</p>
+                                <p class="indicatori" id="red">3.6</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value beta-uno" id="negative"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">8</p>
+
+                            </div>
+
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator beta-due-value">
+                                    <p class="freccia">6</p>
+                                </div>
+
+                                <p class="subtitle-container">Beta 2</p>
+                                <p class="indicatori" id="red">2.2</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value beta-due" id="positive"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">8.0</p>
+
+                            </div>
+
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator Gamma-value">
+                                    <p class="freccia">16</p>
+                                </div>
+
+                                <p class="subtitle-container">Gamma</p>
+                                <p class="indicatori" id="red">8.7</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value Gamma" id="positive"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">18</p>
+
+                            </div>
+                        </div>
+
+                        <div class="elettroforesi-sub-container-two">
+
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator alfa-one--value">
+                                    <p class="freccia">0.59</p>
+                                </div>
+
+                                <p class="subtitle-container">Alfa 1*</p>
+                                <p class="indicatori" id="red">0.24</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value alfa-one-" id="positive"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">0.70</p>
+
+                            </div>
+
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator alfa-due--value">
+                                    <p class="freccia">0.52</p>
+                                </div>
+
+                                <p class="subtitle-container">Alfa 2*</p>
+                                <p class="indicatori" id="red">0.42</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value alfa-due-" id="negative"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">1</p>
+
+                            </div>
+
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator beta-uno--value">
+                                    <p class="freccia">0.50</p>
+                                </div>
+
+                                <p class="subtitle-container">Beta 1*</p>
+                                <p class="indicatori" id="red">0.34</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value beta-uno-" id="positive"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">0.72</p>
+
+                            </div>
+
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator beta-due--value">
+                                    <p class="freccia">0.60</p>
+                                </div>
+
+                                <p class="subtitle-container">Beta 2*</p>
+                                <p class="indicatori" id="red">0.15</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value beta-due-" id="positive"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">0.70</p>
+
+                            </div>
+
+                            <div class="proteine indicator-container">
+
+                                <div class="value-indicator gamma-value">
+                                    <p class="freccia">1.2</p>
+                                </div>
+
+                                <p class="subtitle-container">Gamma*</p>
+                                <p class="indicatori" id="red">0.57</p>
+
+                                <div class="barra-container">
+                                    <p class="barra"></p>
+                                    <p class="barra-value gamma" id="positive"></p>
+                                </div>
+
+                                <p class="indicatori" id="green">1.56</p>
+
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                    <div class="proteine indicator-container">
+
+                        <div class="value-indicator albumina-value">
+                            <p class="freccia">54</p>
+                        </div>
+
+                        <p class="subtitle-container">Albumina</p>
+                        <p class="indicatori" id="red">52.7</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value albumina" id="negative"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">67.4</p>
+
+                    </div>
+
+                    <div class="proteine indicator-container">
+
+                        <div class="value-indicator albumina--value">
+                            <p class="freccia">4.26</p>
+                        </div>
+
+                        <p class="subtitle-container">Albumina *</p>
+                        <p class="indicatori" id="red">3.48</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value albumina-" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">5.86</p>
+
+                    </div>
+
+                    <div class="proteine indicator-container">
+
+                        <div class="value-indicator rapporto-value">
+                            <p class="freccia">1.98</p>
+                        </div>
+
+                        <p class="subtitle-container">Rapporto A/G</p>
+                        <p class="indicatori" id="red">1.20</p>
+
+                        <div class="barra-container">
+                            <p class="barra"></p>
+                            <p class="barra-value rapporto" id="positive"></p>
+                        </div>
+
+                        <p class="indicatori" id="green">2.06</p>
+
+                    </div>
+
+                    <div class="no-bar-value-container">
+                        <div class="proteine indicator-container-nobar">
+                            <p class="subtitle-container-nobar">Beta 2 picco M 1%</p>
+                            <p class="no-bar-value">0</p>
+                        </div>
+
+                        <div class="proteine indicator-container-nobar">
+                            <p class="subtitle-container-nobar">Beta 2 picco M 1</p>
+                            <p class="no-bar-value">0</p>
+                        </div>
+
+                        <div class="proteine indicator-container-nobar">
+                            <p class="subtitle-container-nobar">CM %*</p>
+                            <p class="no-bar-value">0</p>
+                        </div>
+
+                        <div class="proteine indicator-container-nobar">
+                            <p class="subtitle-container-nobar">CM</p>
+                            <p class="no-bar-value">0</p>
+                        </div>  
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-double-index">
+                <div class="assetto-diabetologico-report-graph-container">
+                    <p class="section-tittle">Assetto diabetologico</p>
+    
+                    <div class="assetto-diabetologico-report-ctn container">
+                        <div class="assetto-diabetologico indicator-container">
+                            <div class="value-indicator glicemia-value">
+                                <p class="freccia">94</p>
+                            </div>
+    
+                            <p class="subtitle-container">Glicemia</p>
+                            <p class="indicatori" id="red">74</p>
+    
+                            <div class="barra-container">
+                                <p class="barra"></p>
+                                <p class="barra-value glicemia" id="positive"></p>
+                            </div>
+    
+                            <p class="indicatori" id="green">106</p>
+                        </div>
+    
+                        <div class="assetto-diabetologico  indicator-container">
+    
+                            <div class="value-indicator insulina-value">
+                                <p class="freccia">12</p>
+                            </div> 
+    
+                            <p class="subtitle-container">Insulina</p>
+                            <p class="indicatori" id="red">3</p>
+    
+                            <div class="barra-container">
+                                <p class="barra"></p>
+                                <p class="barra-value insulina" id="positive"></p>
+                            </div>
+    
+                            <p class="indicatori" id="green">16</p>
+    
+                        </div>
+    
+                        <div class="assetto-diabetologico  indicator-container">
+    
+                            <div class="value-indicator homa-value">
+                                <p class="freccia">0.75</p>
+                            </div>
+    
+                            <p class="subtitle-container">Homa Test</p>
+                            <p class="indicatori" id="red">0.23</p>
+    
+                            <div class="barra-container">
+                                <p class="barra"></p>
+                                <p class="barra-value homa" id="negative"></p>
+                            </div>
+    
+                            <p class="indicatori" id="green">2.5</p>
+    
+                        </div>
+    
+                        <div class="assetto-diabetologico  indicator-container">
+    
+                            <div class="value-indicator ir-value">
+                                <p class="freccia">2</p>
+                            </div>
+    
+                            <p class="subtitle-container">Ir Test</p>
+                            <p class="indicatori" id="red">1</p>
+    
+                            <div class="barra-container">
+                                <p class="barra"></p>
+                                <p class="barra-value ir" id="positive"></p>
+                            </div>
+    
+                            <p class="indicatori" id="green">3</p>
+        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="funzionalita-epatica-report-graph-container">
+                    <p class="section-tittle">Assetto diabetologico</p>
+    
+                    <div class="assetto-diabetologico-report-ctn container">
+                        <div class="assetto-diabetologico indicator-container">
+                            <div class="value-indicator sodio-value">
+                                <p class="freccia">124</p>
+                            </div>
+    
+                            <p class="subtitle-container">Sodio(Na)</p>
+                            <p class="indicatori" id="red">136</p>
+    
+                            <div class="barra-container">
+                                <p class="barra"></p>
+                                <p class="barra-value sodio" id="positive"></p>
+                            </div>
+    
+                            <p class="indicatori" id="green">145</p>
+                        </div>
+    
+                        <div class="assetto-diabetologico  indicator-container">
+    
+                            <div class="value-indicator potassio-value">
+                                <p class="freccia">4.1</p>
+                            </div> 
+    
+                            <p class="subtitle-container">Potassio(k)</p>
+                            <p class="indicatori" id="red">3.5</p>
+    
+                            <div class="barra-container">
+                                <p class="barra"></p>
+                                <p class="barra-value potassio" id="positive"></p>
+                            </div>
+    
+                            <p class="indicatori" id="green">5.1</p>
+    
+                        </div>
+    
+                        <div class="assetto-diabetologico  indicator-container">
+    
+                            <div class="value-indicator magnesio-value">
+                                <p class="freccia">2</p>
+                            </div>
+    
+                            <p class="subtitle-container">Magnesio(Mg)</p>
+                            <p class="indicatori" id="red">1.6</p>
+    
+                            <div class="barra-container">
+                                <p class="barra"></p>
+                                <p class="barra-value magnesio" id="negative"></p>
+                            </div>
+    
+                            <p class="indicatori" id="green">2.6</p>
+    
+                        </div>
+    
+                        <div class="assetto-diabetologico  indicator-container">
+    
+                            <div class="value-indicator cloruri-value">
+                                <p class="freccia">106</p>
+                            </div>
+    
+                            <p class="subtitle-container">Cloruri(Cl)</p>
+                            <p class="indicatori" id="red">98</p>
+    
+                            <div class="barra-container">
+                                <p class="barra"></p>
+                                <p class="barra-value cloruri" id="positive"></p>
+                            </div>
+    
+                            <p class="indicatori" id="green">107</p>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+</body>
+</html>
+
+
+
+
+
+

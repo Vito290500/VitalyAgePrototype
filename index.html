@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenoClock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script> 
+</head>
+<body>
+    <header>
+        <div class="nav-bar-user-modal" id="userModal">
+            <button id="nav-bar-user-modal-btn" class="nav-bar-user-modal-btn">log out</button>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="nav-bar-logo">
+                <h2>Vitality Age</h2>
+            </div>
+            <div class="nav-bar-linkage">
+                <a href="index.html" id="active">My Health Profile</a>
+                <a href="VitalityAgeFolder/index.html">Vitality Age</a>
+                <a href="#">Mind Age</a>
+                <a href="">Dashboard</a>
+                <a href="">Employees</a>
+                <a href="">Email Templates</a>
+            </div>
+
+            <div class="nav-bar-user">
+                <div class="nav-bar-user-description">
+                    <h3>Demo User</h3>
+                    <p>Dipanwita Organization</p>
+                </div>
+
+                <img id="userImg" src="includes/img/user2.png" alt="user">
+            </div>
+        </nav>
+
+    </header>
+    
+    <main>
+        <div class="main-title-nav">
+            <h2 class="main-welcome-title">Welcome Back, Demo User</h2>
+            <div class="main-menu-trace">
+                <img src="includes/img/home.png" alt="">
+                <p>»</p>
+                <p>My Health Profile</p>
+            </div>
+        </div>
+        
+        <div class="main-upload-btn">
+            <button class="main-update-btn">Update a new blood test report</button>
+            <button class="main-take-btn">Take a new survey to know your latest mind age</button>
+        </div>
+
+        <div class="main-content">
+
+            <div class="main-content-latest-scores">
+                <p class="section-tittle">Latest Organ Health Scores</p>
+               
+                <div class="score-clock-graph">
+                    
+                    <div class="clock" id="kidneyClock">
+                        <div class="inner"></div>
+                        <div class="percentage" id="kidneyPercentage"></div>
+                      
+                        <p class="clock-description">Kidney Health</p>
+                    </div>
+                
+                    <div class="clock" id="lipidClock">
+                        <div class="inner"></div>
+                        <div class="percentage" id="lipidPercentage"></div>
+                      
+                        <p class="clock-description">Lipid Health</p>
+                    </div>
+                
+                    <div class="clock" id="liverClock">
+                        <div class="inner"></div>
+                        <div class="percentage" id="liverPercentage"></div>
+                       
+                        <p class="clock-description">Liver Health</p>
+                    </div>
+                
+                    <div class="clock" id="glucoseClock">
+                        <div class="inner"></div>
+                        <div class="percentage" id="glucosePercentage"></div>
+                       
+                        <p class="clock-description">Glucose Health</p>
+                    </div>
+                
+                </div>
+             
+            </div>
+
+            <div class="main-content-chronologic-age">
+                <p class="section-tittle">Chronological Age vs Prediction Age</p>
+
+                <div class="chronologic-age-graphic-container">
+                    <p class="chronologic-age-lateral-words">Age (years)</p>
+
+                    <div class="graphic-container-content">
+                        <div class="lateral-number">
+                            <p>100</p>
+                            <p>80</p>
+                            <p>60</p>
+                            <p>40</p>
+                            <p>20</p>
+                            <p>0</p>
+                        </div>
+
+                        <div class="graphic-container-indicator-container">
+                            <div class="indicator-container-value-container">
+                                <div class="first-indicator-container">
+                                    <p class="first-indicator-value">24</p>
+                                    <div class="first-indicator-value-container"></div>
+                                </div>
+
+                                <div class="second-indicator-container">
+                                    <p class="second-indicator-value">34</p>
+                                    <div class="second-indicator-value-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="crhonologic-graph-legenda">
+                    <div class="first-legenda-indicator-container">
+                        
+                        <div class="first-legenda-indicator"></div>
+                        <p>Chrono Age</p>
+                    </div>
+
+                    <div class="second-legenda-indicator-container">
+                        <div class="second-legenda-indicator"></div>
+                        <p>Blood Age</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="main-content-latest-score-graph">
+                <p class="section-tittle">Latest Well Being Scores</p>
+
+                <div class="latest-score-graph-container">
+
+                    <div class="latest-score-container-growth">
+                        <div class="latest-score-indicator-growth"></div>
+                        <p class="latest-score-value">42</p>
+                    </div>
+
+                    <div class="latest-score-container-autonomy">
+                        <div class="latest-score-indicator-autonomy"></div>
+                        <p class="latest-score-value">43</p>
+                    </div>
+
+                    <div class="latest-score-container-self">
+                        <div class="latest-score-indicator-self"></div>
+                        <p class="latest-score-value">34</p>
+                    </div>
+
+                    <div class="latest-score-container-environmental">
+                        <div class="latest-score-indicator-environmental"></div>
+                        <p class="latest-score-value">26</p>
+                    </div>
+
+                    <div class="latest-score-container-purpose">
+                        <div class="latest-score-indicator-purpose"></div>
+                        <p class="latest-score-value">42</p>
+                    </div>
+
+                    <div class="latest-score-container-positive">
+                        <div class="latest-score-indicator-positive"></div>
+                        <p class="latest-score-value">30</p>
+                    </div>
+
+                </div>  
+
+                <p class="horizzontal-line"></p>
+
+                <div class="latest-score-list-number">
+                    <p>0</p>
+                    <p>20</p>
+                    <p>40</p>
+                    <p>60</p>
+                    <p>80</p>
+                    <p>100</p>
+                </div>
+
+                <div class="latest-score-legenda">
+
+                    <div class="legenda-containers">
+                        <div class="growth-indicator-color"></div>
+                        <p>Personal growth</p>
+                    </div>
+
+                    <div class="legenda-containers" id="autonomy-container">
+                        <div class="autonomy-indicator-color"></div>
+                        <p>Autonomy</p>
+                    </div>
+
+                    <div class="legenda-containers">
+                        <div class="self-indicator-color"></div>
+                        <p>Self-acceptance</p>
+                    </div>
+
+                    <div class="legenda-containers" id="enviromental-container">
+                        <div class="enviromental-indicator-color"></div>
+                        <p>Enviromental mastery</p>
+                    </div>
+
+                    <div class="legenda-containers">
+                        <div class="purpose-indicator-color"></div>
+                        <p>Purpose in life</p>
+                    </div>
+
+                    <div class="legenda-containers" id="positive-continer">
+                        <div class="positive-indicator-color"></div>
+                        <p>Positive relations with others</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content-my-latest-report">
+                <p class="section-tittle">My Latest Reports</p>
+
+                <div class="latest-report-blod-age-container">
+                    <div class="latest-report-blod-age-description">
+                        <h4>Blood Age Report</h4>
+                        <p>Generated on Mon Aug 26 2024</p>
+                    </div>
+                    <button class="blod-age-btn">Download</button>
+                </div>
+                <div class="latest-report-mind-age-container">
+                    <div class="latest-report-mind-age-description">
+                        <h4>Min Age Report</h4>
+                        <p>Generated on Mon Aug 26 2024</p>
+                    </div>
+                    <button class="mind-age-btn">Download</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>® Vitality Age Limited 2024, All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
